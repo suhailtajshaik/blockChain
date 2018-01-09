@@ -9,7 +9,6 @@ suhailCoin.addBlock(new Block(2, "11/07/2017", { 'amount': 10 }));
 console.log(JSON.stringify(suhailCoin, null, 4));
 console.log("Is blockchain valid ? : ", suhailCoin.isChainValid());
 
-
 // Tampering with blockchain
 
 // Change the amount 
