@@ -1,6 +1,6 @@
 
-const timestamp = require('time-stamp');
 const Block = require('./Block');
+const timestamp = require('time-stamp');
 
 class Blockchain {
     constructor() {
@@ -27,6 +27,24 @@ class Blockchain {
     // Generate Timestamp
     generateTimestamp() {
         return timestamp('YYYY/MM/DD:mm:ss');
+    }
+
+    isChainValid() {
+        for (let index = 1; index < this.chain.length; index++) {
+            const currentBlock = this.chain[index];
+            const previousBlock = this.chain[index - 1];
+
+            // Recalculate the hash
+            if (currentBlock.hash !== currentBlock.calculateHash()) {
+                return false;
+            }
+
+            // Block points to correct previous block
+            if (currentBlock.previousHash !== previousBlock.hash) {
+                return false;
+            } 
+        }
+        return true;
     }
 }
 
