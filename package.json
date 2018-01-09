@@ -1,0 +1,19 @@
+{
+  "name": "blockchain",
+  "version": "1.0.0",
+  "description": "Block Chain Implementation like BitCoin",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "keywords": [
+    "Blockchain",
+    "Bitcoin"
+  ],
+  "author": "Suhail Taj Shaik <contact@suhailtaj.com>",
+  "license": "ISC",
+  "dependencies": {
+    "crypto-js": "^3.1.9-1",
+    "time-stamp": "^2.0.0"
+  }
+}
