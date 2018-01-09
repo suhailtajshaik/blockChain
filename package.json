@@ -1,7 +1,7 @@
 {
   "name": "blockchain",
   "version": "1.0.0",
-  "description": "Block Chain Implementation like BitCoin",
+  "description": "Basic Blockchain implementaion",
   "main": "main.js",
   "scripts": {
     "start": "node main.js"
